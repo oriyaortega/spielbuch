@@ -1,0 +1,10 @@
+services:
+  bot:
+    build: .
+    container_name: spielbuch-bot
+    restart: unless-stopped
+    # BOT_TOKEN is read from .env next to this file
+    env_file: .env
+    volumes:
+      # Player database: ./data/players.db relative to where docker compose is run
+      - ./data:/app/data

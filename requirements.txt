@@ -1,0 +1,2 @@
+aiogram>=3.13,<4
+pymupdf>=1.24   # only needed for build_book.py
